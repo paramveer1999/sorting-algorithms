@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<conio.h>
+void selectionsort(int a[],int n)
+{
+int i,j,loc,min,temp;
+for(i=0;i<n;i++)
+{
+min=a[i];
+loc=i;
+for(j=i+1;j<n;j++)
+{
+ if(min>a[j])
+ {
+ min=a[j];
+ loc=j;
+ }}
+temp=a[i];
+a[i]=a[loc];
+a[loc]=temp;
+}}
+void main()
+{
+int a[10],i,n;
+clrscr();
+printf("how many numbers you want to enter");
+
+scanf("%d",&n);
+printf("enter numbers");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+selectionsort(a,n);
+for(i=0;i<n;i++)
+{
+printf("\n%d",a[i]);
+}
+getch();
+}
